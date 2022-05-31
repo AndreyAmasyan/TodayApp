@@ -1,20 +1,14 @@
-//
-//  ViewController.swift
-//  TodayApp
-//
-//  Created by   Andrew on 28.04.2022.
-//
+/*
+See LICENSE folder for this sample’s licensing information.
+*/
 
 import UIKit
 
 class ReminderListViewController: UICollectionViewController {
-    
-    
     var dataSource: DataSource!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
         let listLayout = listLayout()
         collectionView.collectionViewLayout = listLayout
@@ -39,9 +33,6 @@ class ReminderListViewController: UICollectionViewController {
         listConfiguration.backgroundColor = .clear
         return UICollectionViewCompositionalLayout.list(using: listConfiguration)
     }
-    
-    
-    
-    
 }
+
 

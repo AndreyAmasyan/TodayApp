@@ -1,9 +1,6 @@
-//
-//  Reminder.swift
-//  TodayApp
-//
-//  Created by   Andrew on 29.04.2022.
-//
+/*
+See LICENSE folder for this sample’s licensing information.
+*/
 
 import Foundation
 
