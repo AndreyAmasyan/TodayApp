@@ -1,9 +1,6 @@
-//
-//  ReminderListViewController+Actions.swift
-//  TodayApp
-//
-//  Created by   Andrew on 05.06.2022.
-//
+/*
+See LICENSE folder for this sample’s licensing information.
+*/
 
 import UIKit
 
@@ -13,3 +10,4 @@ extension ReminderListViewController {
         completeReminder(with: id)
     }
 }
+

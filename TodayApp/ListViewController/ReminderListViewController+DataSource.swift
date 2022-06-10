@@ -1,6 +1,6 @@
 /*
- See LICENSE folder for this sample’s licensing information.
- */
+See LICENSE folder for this sample’s licensing information.
+*/
 
 import UIKit
 
@@ -11,12 +11,11 @@ extension ReminderListViewController {
     var reminderCompletedValue: String {
         NSLocalizedString("Completed", comment: "Reminder completed value")
     }
-    
     var reminderNotCompletedValue: String {
         NSLocalizedString("Not completed", comment: "Reminder not completed value")
     }
     
-    func updateSnapshot(reloading ids: [Reminder.ID] = [] ) {
+    func updateSnapshot(reloading ids: [Reminder.ID] = []) {
         var snapshot = Snapshot()
         snapshot.appendSections([0])
         snapshot.appendItems(reminders.map { $0.id })
@@ -27,7 +26,7 @@ extension ReminderListViewController {
     }
     
     func cellRegistrationHandler(cell: UICollectionViewListCell, indexPath: IndexPath, id: Reminder.ID) {
-        let reminder = reminders[indexPath.item]
+        let reminder = reminder(for: id)
         var contentConfiguration = cell.defaultContentConfiguration()
         contentConfiguration.text = reminder.title
         contentConfiguration.secondaryText = reminder.dueDate.dayAndTimeText
@@ -58,7 +57,6 @@ extension ReminderListViewController {
             self?.completeReminder(with: reminder.id)
             return true
         }
-        
         return action
     }
     

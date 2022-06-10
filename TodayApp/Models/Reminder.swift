@@ -17,7 +17,6 @@ extension Array where Element == Reminder {
         guard let index = firstIndex(where: { $0.id == id }) else {
             fatalError()
         }
-        
         return index
     }
 }
